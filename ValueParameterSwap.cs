@@ -22,8 +22,8 @@ namespace FirstProgranToUpload
         {
             int num1 = 10;
             int num2 = 200;
-            Console.WriteLine(num1+ "  "+ num2);
             Swapping(num1, num2);
+            Console.WriteLine(num1+ "  "+ num2);
             Console.ReadLine();
         }
     }
