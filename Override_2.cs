@@ -22,7 +22,7 @@ class Child_1 : Parent_1
     {
         Console.WriteLine("Child Choice");
     }
-    static void Main2()
+    static void Main()
     {
         Child_1 c = new Child_1();
         c.Marry();
