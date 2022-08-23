@@ -1,5 +1,5 @@
 ﻿using System;
-class Parent1
+class Parent
 {
     protected void Property()
     {
@@ -10,15 +10,15 @@ class Parent1
         Console.WriteLine("Father Choice");
     }
 }
-class Child21:Parent1
+class Child:Parent
 {
     protected override void Marry()
     {
         Console.WriteLine("Child Choice");
     }
-    static void Main1()
+    static void Main()
     {
-        Child21 child = new Child21();
+        Child child = new Child();
         child.Property();
         child.Marry();
         Console.ReadLine();
