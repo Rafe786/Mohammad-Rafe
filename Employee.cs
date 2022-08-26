@@ -1,5 +1,6 @@
-﻿using System;
-namespace Constructors
+﻿//Use Getter & Setter...................
+using System;
+namespace Rafe
 {
     class Employee
     {
@@ -7,40 +8,37 @@ namespace Constructors
         private string empName;
         private double empSal;
         private Address empAddress;
-        public Employee(int empNo,string empName,double empSal,Address empAddress)
+        public void SetEmpNo(int empNo)
         {
             this.empNo = empNo;
+        }
+        public void SetEmpName(string empName)
+        {
             this.empName = empName;
+        }
+        public void SetEmpSal(double empSal)
+        {
             this.empSal = empSal;
+        }
+        public void SetEmpAddress(Address empAddress)
+        {
             this.empAddress = empAddress;
         }
-        public int EmpNo
+        public int GetEmpNo()
         {
-            get
-            {
-                return empNo;
-            }
+            return empNo;
         }
-        public string EmpName
+        public string GetEmpName()
         {
-            get
-            {
-                return empName;
-            }
+            return empName;
         }
-        public double EmpSal
+        public double GetEmpSal()
         {
-            get
-            {
-                return empSal;
-            }
+            return empSal;
         }
-        public Address EmpAddress
+        public Address GetEmpAddress()
         {
-            get
-            {
-                return empAddress;
-            }
+            return empAddress;
         }
     }
 }
