@@ -1,125 +1,46 @@
-//using property ...............................................................................................................
-using System;
-class Address
+﻿using System;
+namespace Rafe
 {
-   private int  houseNo;
-   private string  houseName;
-   private int pinCode;
-  public int  HouseNo
-  {
-    set
-   {
-     houseNo =value;
-   }
-    get
-     {
-     return houseNo ;
-     }
-  }
-     public  string HouseName
-     {
-      set
-      {
-       houseName = value;
-    }
-   get
+    class Employee
     {
-     return houseName;
-    
-     }
+        private int empNo;
+        private string empName;
+        private double empSal;
+        private Address empAddress;
+        public Employee(int empNo, string empName, double empSal, Address empAddress)
+        {
+            this.empNo = empNo;
+            this.empName = empName;
+            this.empSal = empSal;
+            this.empAddress = empAddress;
+        }
+        public int EmpNo
+        {
+            get
+            {
+                return empNo;
+            }
+        }
+        public string EmpName
+        {
+            get
+            {
+                return empName;
+            }
+        }
+        public double EmpSal
+        {
+            get
+            {
+                return empSal;
+            }
+        }
+        public Address EmpAddress
+        {
+            get
+            {
+                return empAddress;
+            }
+        }
     }
-    public int PinCode
-    {
-     set
-      {
-       pinCode = value;
-       }
-      get
-       {
-        return pinCode;
-       }
-   }
-   public override string ToString()
-  {
-	return houseNo +  ",  " + houseName + ",  " + pinCode;
-  }
 }
-
-class Employee
-{
-	private int empNo;
-  	private string empName;
-	private double empSal;
-    private Address empAddress;
-	public int EmpNo
-	{
-	set
-	{
-	  empNo=value;
-	}
-	get
-	{
-	  return empNo;
-	}
-    }
-	public string EmpName
-	{
-	set
-	{
-	  empName=value;
-	}
-	get
-	{
-	  return empName;
-	}
-    }
-	public double EmpSal
-	{
-	set
-	{
-	  empSal=value;
-	}
-	get 
-	{
-	  return empSal;
-	}
-    }
-     public Address EmpAddress
-     {
-       set
-      {
-       empAddress=value;
-       }
-     get
-       {
-         return empAddress;
-       }
-	 }
-}
-class Chetu
-{
-static void Main()
-{
-	Employee employee=new Employee();
-        employee.EmpNo = 1421;
-        employee.EmpName= "Dinesh";
-        employee.EmpSal = 2340.99;
-        
-   
-	Address address = new Address();
-   address.HouseNo =12;
-   address.HouseName= "Sharda Bhawan";
-   address.PinCode = 121;
-   employee.EmpAddress = address;
-      
-Console.WriteLine(".................");
-Console.WriteLine(".......EmployeeDatile......");
-Console.WriteLine(employee.EmpNo);
-Console.WriteLine(employee.EmpName);
-Console.WriteLine(employee.EmpSal);
-Console.WriteLine("............");
-Console.WriteLine("Address is : " + employee.EmpAddress);
-}
-}
-
-
