@@ -1,6 +1,5 @@
-﻿//Use Getter & Setter...................
-using System;
-namespace ConsoleApp4
+﻿using System;
+namespace Constructors
 {
     class Employee
     {
@@ -8,37 +7,40 @@ namespace ConsoleApp4
         private string empName;
         private double empSal;
         private Address empAddress;
-        public void SetEmpNo(int empNo)
+        public Employee(int empNo,string empName,double empSal,Address empAddress)
         {
             this.empNo = empNo;
-        }
-        public void SetEmpName(string empName)
-        {
             this.empName = empName;
-        }
-        public void SetEmpSal(double empSal)
-        {
             this.empSal = empSal;
-        }
-        public void SetEmpAddress( Address empAddress)
-        {
             this.empAddress = empAddress;
         }
-        public int GetEmpNo()
+        public int EmpNo
         {
-            return empNo;
+            get
+            {
+                return empNo;
+            }
         }
-        public string GetEmpName()
+        public string EmpName
         {
-            return empName;
+            get
+            {
+                return empName;
+            }
         }
-        public double GetEmpSal()
+        public double EmpSal
         {
-            return empSal;
+            get
+            {
+                return empSal;
+            }
         }
-        public Address GetEmpAddress()
+        public Address EmpAddress
         {
-            return empAddress;
+            get
+            {
+                return empAddress;
+            }
         }
     }
 }
