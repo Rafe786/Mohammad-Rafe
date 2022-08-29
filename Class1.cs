@@ -1,22 +1,20 @@
 ﻿using System;
-class Parent
+namespace Abstract
 {
-    protected virtual void Marry()
+    abstract class Test1
     {
-        Console.WriteLine("Father Choice");
+        public abstract void Display();         //We can create bodyless method in abstract class this is called abstract method
     }
-}
-class Child1:Parent
-{
-    protected override void Marry()
+    class Demo1 : Test1
     {
-        base.Marry();
-        Console.WriteLine("After 3 Years");
-    }
-    static void Main()
-    {
-        Child1 c = new Child1();
-        c.Marry();
-        Console.ReadLine();
+        public override void Display()
+        {
+            Console.WriteLine("Hello Sir!");
+        }
+        static void Main()         
+        {
+            Test1 t = new Demo1();      //Can't create abstrac class's object...
+            t.Display();
+        }
     }
 }

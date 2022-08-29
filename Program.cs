@@ -1,48 +1,19 @@
-﻿class Demo
+﻿using System;
+namespace Abstract
 {
-    static int[] sort(int[] arr)
+    abstract class Test
     {
-        int ctr = 0;
-
-        int temp = 0;
-        while (ctr < arr.Length)
+        public void Show()
         {
-            int ptr = ctr + 1;
-            while (ptr < arr.Length)
-            {
-                if (arr[ctr] > arr[ptr])
-                {
-                    temp = arr[ctr];
-                    arr[ctr] = arr[ptr];
-                    arr[ptr] = temp;
-                }
-                ptr++;
-            }
-            ctr = ctr + 1;
+            Console.WriteLine("Hello");
         }
-        return arr;
     }
-    static void Main()
+    class Demo : Test
     {
-        System.Console.WriteLine(" enter the size of arry");
-        int b = int.Parse(System.Console.ReadLine());
-        int[] arr = new int[b];
-        int i = 0;
-        while (i < b)
+        static void Main()
         {
-            System.Console.WriteLine(" enter the value");
-            arr [i] = int.Parse(System.Console.ReadLine());
-            i++;
+            Test t = new Demo();   //Can't create abstrac class's object...
+            t.Show();             
         }
-        int []array = sort(arr);
-        foreach (int s in array)
-        {
-            System.Console.Write (s);
-
-
-        }
-        
-
     }
-
 }
